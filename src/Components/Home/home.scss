@@ -1,0 +1,127 @@
+.container {
+    background-image: url(/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+nav {
+    text-align: center;
+}
+  
+nav a {
+    color: var(--whiteColor);
+    text-decoration: none;
+    padding-left: 15px;
+    font-size: 20px; 
+    position: relative;
+}
+
+nav a:hover {
+    color: var(--btnColor);  
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-image: linear-gradient(to right, #8360c3, #2ebf91, #ffd452);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.btnContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-top: 350PX;
+}
+  
+.btn {
+    margin-top: 10px;
+}
+  
+.soc-media {
+    font-size: 25px;
+    color: var(--socBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+  
+.fb:hover,
+.lin:hover,
+.twit:hover,
+.insta:hover {
+    color: var(--btnHoverColor);
+    box-shadow: 0 0 10px grey;
+}
+  
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .travelLogo {
+        font-size: 25px;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+        padding: 15px;
+        font-size: 20px;
+    }
+
+    nav a::after {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    nav a::after {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .btnContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+        padding-top: 720px;
+    }
+
+    .btn {
+        margin-top: 10px;
+    }
+
+    .soc-media {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 30px;
+    }
+}
+

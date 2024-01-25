@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Grape Nuts', cursive;
+    text-decoration: none;
+}
+
+/*colors*/
+:root {
+    --whiteColor: #ffffff;
+    --btnColor: #a8ff78;
+    --btnHoverColor: #ffd452;
+    --blackColor: #000000;
+    --socBlue: #5990dc;
+    --svgDel: #ff0000;
+    --inputColor: #efefef;
+    --locatioColor: #2f47a9;
+    --priceColor: #00a165;
+}
+.container {
+    padding: 20px;
+}
+
+.logo {
+    color: var(--whiteColor);
+    margin-top: 5px;
+    font-size: 35px;
+}
+.btn {
+    background-color: var(--btnColor);
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    a {
+        font-family: sans-serif;
+        color: var(--whiteColor);
+        margin: 0 10px;
+    }
+
+    .icon {
+        margin-left: 10px;
+        vertical-align: middle;
+    }
+}
+
+button:hover,
+.btn a:hover {
+    background-color: var(--btnHoverColor);
+    color: var(--blackColor);
+}
+
+
+  
+
+
