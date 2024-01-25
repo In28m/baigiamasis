@@ -67,7 +67,7 @@ nav a:hover::after {
     box-shadow: 0 0 10px grey;
 }
   
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 348px) and (max-width: 1180px) {
     .container {
         padding: 15px;
     }
@@ -111,7 +111,7 @@ nav a:hover::after {
         margin-bottom: 50px;
         padding-top: 720px;
     }
-
+    
     .btn {
         margin-top: 10px;
     }
