@@ -1,0 +1,58 @@
+.contactSection {
+    background-color: var(--aboutColor);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+  
+    .Contcontainer {
+      background-image: url(/new.jpg);
+      background-repeat: no-repeat;
+      background-size: 60%;
+      width: 90%;
+      height: calc(70vh - 10px);
+      margin: 20px auto;
+      box-sizing: border-box;
+      border-radius: 20px;
+      padding: 60px;
+      border: 1px solid white;
+      display: flex;
+      align-items: center;
+  
+      .contactH {
+        h1 {
+          color: var(--locatioColor);
+          position: relative;
+          background-position: center;
+          flex-direction: column;
+          margin-left: 150px; 
+        }
+  
+        h3 {
+          color: var(--locatioColor);
+          margin-left: 150px; 
+        }
+      }
+  
+      .contInput {
+        width: 60%;
+        display: grid;
+        gap: 15px;
+        justify-content: end;
+  
+        input {
+          width: 150px;
+        }
+  
+        .messageInput {
+          height: 150px;
+          text-align: center;
+          padding-top: 0; /*sureguliuoti aukštį*/
+        }
+      }
+    }
+  }
+  
