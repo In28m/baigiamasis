@@ -1,13 +1,17 @@
-import React from 'react'
-import { BrowserRouter as Router, Route, Routes, Link, Outlet, useParams } from 'react-router-dom';;
-import './style.scss'
-import './Components/GetStart/getStart.scss'
-import './Components/Submit/submit.scss'
-import './Components/Booking/_booking.scss'
-import Home from './Components/Home/Home'
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './style.scss';
+import './Components/GetStart/getStart.scss';
+import './Components/Submit/submit.scss';
+import './Components/Booking/_booking.scss';
+import './Components/About/about.scss'
+import Home from './Components/Home/Home';
 import GetStart from './Components/GetStart/GetStart';
 import Submit from './Components/Submit/Submit';
 import Booking from './Components/Booking/Booking';
+import About from './Components/About/About';
+//import Contact from './Components/Contact/Contact';  
 
 function App() {
   return (
@@ -17,9 +21,11 @@ function App() {
         <Route path="/get-start" element={<GetStart />} />
         <Route path="/booking" element={<Booking />} />
         <Route path="/submit" element={<Submit />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
+
