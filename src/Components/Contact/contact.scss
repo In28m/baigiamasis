@@ -1,58 +1,119 @@
 .contactSection {
-    background-color: var(--aboutColor);
-    background-size: cover;
+  background-color: var(--aboutColor);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+
+  .Contcontainer {
+    background-image: url(/new.jpg);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    width: 90%;
+    height: calc(70vh - 10px);
+    margin: 20px auto;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 60px;
+    border: 1px solid white;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    position: relative;
-    height: 100vh;
-  
+
+    .contactH {
+      h1 {
+        color: var(--locatioColor);
+        position: relative;
+        background-position: center;
+        flex-direction: column;
+        margin-left: 150px;
+      }
+
+      h3 {
+        color: var(--locatioColor);
+        margin-left: 150px;
+      }
+    }
+
+    .contInput {
+      width: 60%;
+      display: grid;
+      gap: 15px;
+      justify-content: end;
+
+      input {
+        background-color: rgba(53, 50, 50, 0.137);
+        width: 150px;
+        text-align: center;
+        outline: none;
+        border-radius: 5px;
+        border-style: groove;
+      }
+
+      input:hover {
+        border-color: #2f47a9;
+        box-shadow: 0 0 10px #2f47a9;
+      }
+
+      input::placeholder {
+        color: var(--blackColor);
+      }
+    }
+
+    textarea {
+      background-color: rgba(53, 50, 50, 0.137);
+      width: 150px;
+      text-align: center;
+      outline: none;
+      border-radius: 5px;
+      border-style: groove;
+      border: 1px solid black;
+    }
+
+    textarea:hover {
+      border-color: #2f47a9;
+      box-shadow: 0 0 10px #2f47a9;
+    }
+
+    textarea::placeholder {
+      color: var(--blackColor);
+    }
+  }
+
+  @media only screen and (min-width: 348px) and (max-width: 923px) {
     .Contcontainer {
-      background-image: url(/new.jpg);
-      background-repeat: no-repeat;
-      background-size: 60%;
-      width: 90%;
-      height: calc(70vh - 10px);
-      margin: 20px auto;
-      box-sizing: border-box;
-      border-radius: 20px;
-      padding: 60px;
-      border: 1px solid white;
-      display: flex;
-      align-items: center;
-  
+      flex-direction: column;
+      background-size: 100%;
+      width: 40%;
+      height: auto;
+
       .contactH {
-        h1 {
-          color: var(--locatioColor);
-          position: relative;
-          background-position: center;
-          flex-direction: column;
-          margin-left: 150px; 
-        }
-  
+        h1,
         h3 {
-          color: var(--locatioColor);
-          margin-left: 150px; 
+          margin-left: 0;
+          font-size: 25px;
         }
       }
-  
+
       .contInput {
-        width: 60%;
-        display: grid;
-        gap: 15px;
-        justify-content: end;
-  
-        input {
-          width: 150px;
-        }
-  
-        .messageInput {
-          height: 150px;
-          text-align: center;
-          padding-top: 0; /*sureguliuoti aukštį*/
-        }
+        width: 100%;
+        margin-top: 50px;
+        text-align: center;
       }
     }
   }
+
+  @media only screen and (min-width: 924px) {
+    .Contcontainer {
+      background-size: 60%;
+      height: 25vh;
+    }
+    .contInput {
+      text-align: center;
+    }
+  }
+}
+
   
