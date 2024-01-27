@@ -22,6 +22,10 @@
         border-radius: 20px;
         padding: 60px;
 
+        p {
+            margin-top: 15px;
+        }
+
         .aboutcontent {
             position: relative;
             padding: 30px;
@@ -53,21 +57,13 @@
     }
 
     @media only screen and (min-width: 348px) and (max-width: 823px) {
-        .containerAbout {
-            width: 90%;
-            height: auto;            
+        .sectionAbout {
+            height: 100vh;
         }
 
-        .hotelLogo {
-            flex-direction: column;
-            gap: 20px;
-        }
-    }
-
-    @media only screen and (min-width: 824px) and (max-width: 1000px) {
         .containerAbout {
             width: 90%;
-            height: 50vh;            
+            height: 70vh;
         }
     }
 }

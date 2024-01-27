@@ -19,9 +19,6 @@ const About = () => {
                 <a href="https://www.hilton.com/en/" target="_blank"><img className='logo1' src="hiltonas.svg" alt="" />
                 </a>
 
-                <a href="https://www.dukeshotel.com/" target="_blank"><img className='logo1' src="logo.svg" alt="" />
-                </a>
-
                 <a href="https://www.victoriapalacehotels.com/" target="_blank"><img className='logo1' src="logoVici.png" alt="" />
                 </a>
             </div>
