@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { IoLocationSharp } from "react-icons/io5";
-
+import { FaCheckDouble} from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 
 const GetStart = () => {
   const [selectedCategory, setSelectedCategory] = useState('location')
@@ -16,7 +17,7 @@ const GetStart = () => {
   const filterPlacesByCategory = (category) => {
     const filteredData = allPlaces.filter(place => place.location === category)
     setFilteredPlaces(filteredData)
-  }
+  };
 
   const fetchPlaces = async () => {
     try {
@@ -42,23 +43,28 @@ const GetStart = () => {
     <div className="main">
       <div className="item-container">
         <span className="item-label">Your Travel</span>
-          <select className='category' value={selectedCategory} onChange={handleCategoryChange}>
-            <option value="location">location:</option>
-            {allPlaces.map(place => (
-              <option key={place.id} value={place.location}>{place.location}</option>
-            ))}
-          </select>
+        <select className='category' value={selectedCategory} onChange={handleCategoryChange}>
+          <option value="location">location:</option>
+          {allPlaces.map(place => (
+            <option key={place.id} value={place.location}>{place.location}</option>
+          ))}
+        </select>
+        <button className='btn'>
+        <Link to="/booking">Booking <FaCheckDouble className='icon' /></Link>
+      </button>
       </div>
+
+      
 
       <div className="cards-container">
         {filteredPlaces.map(place => (
           <div key={place.id} className="card">
             <img src={place.img} alt={`Image for ${place.location}`} className="card-image" />
-              <div className="card-content">
-                <p className="card-location"><IoLocationSharp /> {place.location}</p>
-                <p className="card-price">{place.price}</p>
-                <p className="card-description">{place.description}</p>
-              </div>
+            <div className="card-content">
+              <p className="card-location"><IoLocationSharp /> {place.location}</p>
+              <p className="card-price">{place.price}</p>
+              <p className="card-description">{place.description}</p>
+            </div>
           </div>
         ))}
       </div>
@@ -67,13 +73,3 @@ const GetStart = () => {
 }
 
 export default GetStart
-
-
-
-
-
-
-
-
-
-
