@@ -86,7 +86,7 @@
     .Contcontainer {
       flex-direction: column;
       background-size: 100%;
-      width: 40%;
+      width: 90%;
       height: auto;
 
       .contactH {
@@ -99,8 +99,9 @@
 
       .contInput {
         width: 100%;
-        margin-top: 50px;
+        margin-top: 150px;
         text-align: center;
+        justify-content: center;
       }
     }
   }
