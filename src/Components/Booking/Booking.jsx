@@ -61,7 +61,7 @@ const BookingForm = () => {
       setPhone('')
       setEmail('')
     } else {
-      alert("Prašome užpildyti visus laukus tinkamai!")
+      alert("Prašome tinkamai užpildyti visus laukus!")
     }
   }
 

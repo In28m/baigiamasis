@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { IoLocationSharp } from "react-icons/io5";
-import { FaCheckDouble} from 'react-icons/fa6';
+import { FaCheckDouble } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
+import { PiStarThin } from 'react-icons/pi';
 
 const GetStart = () => {
   const [selectedCategory, setSelectedCategory] = useState('location')
@@ -17,27 +18,28 @@ const GetStart = () => {
   const filterPlacesByCategory = (category) => {
     const filteredData = allPlaces.filter(place => place.location === category)
     setFilteredPlaces(filteredData)
-  };
+  }
 
   const fetchPlaces = async () => {
     try {
       const response = await fetch('http://localhost:4000/places')
-      console.log('HTTP Response:', response)
       const data = await response.json()
-      setAllPlaces(data)
-      setFilteredPlaces(data)
+
+      const placesWithRating = data.map(place => ({
+        ...place,
+        rating: Math.floor(Math.random() * 5) + 1,
+      }))
+
+      setAllPlaces(placesWithRating)
+      setFilteredPlaces(placesWithRating)
     } catch (error) {
       console.error(error)
     }
   }
-  
+
   useEffect(() => {
     fetchPlaces()
   }, [])
-
-  useEffect(() => {
-    console.log('Selected Category:', selectedCategory)
-  }, [selectedCategory])
 
   return (
     <div className="main">
@@ -50,21 +52,24 @@ const GetStart = () => {
           ))}
         </select>
         <button className='btn'>
-        <Link to="/booking">Booking <FaCheckDouble className='icon' /></Link>
-      </button>
+          <Link to="/booking">Booking <FaCheckDouble className='icon' /></Link>
+        </button>
       </div>
-
-      
 
       <div className="cards-container">
         {filteredPlaces.map(place => (
           <div key={place.id} className="card">
             <img src={place.img} alt={`Image for ${place.location}`} className="card-image" />
-            <div className="card-content">
-              <p className="card-location"><IoLocationSharp /> {place.location}</p>
-              <p className="card-price">{place.price}</p>
-              <p className="card-description">{place.description}</p>
-            </div>
+              <div className="card-content">
+                <p className="card-location"><IoLocationSharp /> {place.location}</p>
+                <p className="card-price">{place.price}</p>
+                <p className="card-description">{place.description}</p>
+                  <div className="card-rating">
+                    {Array.from({ length: place.rating }, (_, index) => (
+                      <PiStarThin key={index} />
+                    ))}
+                  </div>
+              </div>
           </div>
         ))}
       </div>

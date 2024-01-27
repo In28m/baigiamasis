@@ -29,15 +29,15 @@ const Contact = () => {
 
         <div className="contInput">
           <h3>Message Us</h3>
-          <input type="text" placeholder='name' />
-          <input type="number" placeholder='phone' />
-          <input type="text" placeholder='email' />
-          <textarea
-            className='messageInput'
-            placeholder='Your message'
-            value={message}
-            onChange={handleChange}
-          />
+            <input type="text" placeholder='name' />
+            <input type="number" placeholder='phone' />
+            <input type="text" placeholder='email' />
+            <textarea
+              className='messageInput'
+              placeholder='Your message'
+              value={message}
+              onChange={handleChange}
+            />
         </div>
       </div>
     </section>
