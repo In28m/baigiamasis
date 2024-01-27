@@ -51,4 +51,23 @@
             }
         }
     }
+
+    @media only screen and (min-width: 348px) and (max-width: 823px) {
+        .containerAbout {
+            width: 90%;
+            height: auto;            
+        }
+
+        .hotelLogo {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    @media only screen and (min-width: 824px) {
+        .containerAbout {
+            width: 90%;
+            height: 50vh;            
+        }
+    }
 }
