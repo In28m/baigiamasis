@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { BsSend } from "react-icons/bs";
 
 const Contact = () => {
   const [message, setMessage] = useState('')
@@ -38,6 +39,7 @@ const Contact = () => {
               value={message}
               onChange={handleChange}
             />
+          <button className='send'>Send <BsSend className='iconSend' /></button>
         </div>
       </div>
     </section>

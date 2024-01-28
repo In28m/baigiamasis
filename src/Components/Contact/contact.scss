@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 100vh;
+  height: 100vh ;
 
   .Contcontainer {
     background-image: url(/new.jpg);
@@ -79,7 +79,29 @@
     textarea::placeholder {
       color: var(--blackColor);
     }
+
+    .send {
+      background-color: var(--btnColor);
+      margin-top: 20px;
+      padding: 5px 15px;
+      font-size: 18px;
+      border-radius: 60px;
+      border: none;
+      color: white;
+
+      .iconSend {
+        margin-left: 10px;
+        vertical-align: middle;
+      }
+    }
+   
+      button:hover,
+      .send a:hover {
+        background-color: var(--btnHoverColor);
+        color: var(--blackColor);
+    }
   }
+ 
 
   @media only screen and (min-width: 348px) and (max-width: 923px) {
     .Contcontainer {
@@ -98,7 +120,7 @@
 
       .contInput {
         width: 100%;
-        margin-top: 150px;
+        margin-top: 100px;
         text-align: center;
         justify-content: center;
       }
@@ -112,6 +134,7 @@
     }
     .contInput {
       text-align: center;
+      margin-top: 200px;
     }
   }
 }
