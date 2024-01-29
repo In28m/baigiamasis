@@ -16,8 +16,12 @@ const Home = () => {
         <nav>
           <Link to="/about">ABOUT</Link>
           <Link to="/contact">CONTACT</Link>
+          <h1 className='wel'>WELCOME</h1>
         </nav>
+        
       </div>
+
+      
 
       <div className="btnContainer">
         <button className='btn'>

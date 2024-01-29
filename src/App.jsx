@@ -6,7 +6,9 @@ import './Components/Submit/submit.scss';
 import './Components/Booking/_booking.scss';
 import './Components/About/about.scss';
 import './Components/Contact/contact.scss';
-import './Components/More/more.scss';
+import './Components/More/_more.scss';
+import './Components/Home/home.scss';
+
 import More from './Components/More/More';
 import Home from './Components/Home/Home';
 import GetStart from './Components/GetStart/GetStart';
