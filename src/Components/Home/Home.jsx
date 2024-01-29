@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { SiYourtraveldottv } from 'react-icons/si';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { TiSocialFacebook, TiSocialLinkedin, TiSocialTwitter, TiSocialInstagram } from 'react-icons/ti';
-import './home.scss';
+
 
 const Home = () => {
   return (
