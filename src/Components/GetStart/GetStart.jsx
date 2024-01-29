@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { IoLocationSharp } from "react-icons/io5";
 import { FaCheckDouble } from 'react-icons/fa6';
 import { PiStarThin } from 'react-icons/pi';
+import { BsArrowRightCircle } from "react-icons/bs";
+
 import { Link } from 'react-router-dom';
 
 
@@ -61,21 +63,22 @@ const GetStart = () => {
         {filteredPlaces.map(place => (
           <div key={place.id} className="card">
             <img src={place.img} alt={`Image for ${place.location}`} className="card-image" />
-            <div className="card-content">
-              <p className="card-location"><IoLocationSharp /> {place.location}</p>
-              <p className="card-price">{place.price}</p>
-              <p className="card-description">{place.description}</p>
+              <div className="card-content">
+                <p className="card-location"><IoLocationSharp /> {place.location}</p>
+                <p className="card-price">{place.price}</p>
+                <p className="card-description">{place.description}</p>
               <div className="card-rating">
                 {Array.from({ length: place.rating }, (_, index) => (
                   <PiStarThin key={index} />
                 ))}
               </div>
-              <Link to={`/more/${place.id}`} className="more-btn">
-                {place.showMore ? 'Less' : 'More'}
-              </Link>
+                <Link to={`/more/${place.id}`} className="more-btn">
+                    <span className="btn-text">{place.showMore ? 'Less' : 'More'}</span>
+                    <BsArrowRightCircle className="arrow-icon" />
+                </Link>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
     </div>
   )
