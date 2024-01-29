@@ -83,7 +83,7 @@ nav a:hover::after {
 
     .travelLogo {
         font-size: 20px;
-        margin-top: 25px;
+        margin-top: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -95,9 +95,13 @@ nav a:hover::after {
             a {
                 display: block;
                 margin: 10px 0;
-                padding: 10px;
+                padding: 5px;
                 font-size: 15px;
+            }
 
+            .wel {
+                font-size: 35px;
+                padding-top: 40px;
             }
         }
 
