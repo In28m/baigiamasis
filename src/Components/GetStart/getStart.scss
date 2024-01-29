@@ -89,6 +89,18 @@
       }
     }
   }
+
+  .more-btn {
+    color: var(--locatioColor);
+    padding: 1px 5px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.more-btn:hover {
+    color: var(--socBlue);    
+}
+
   
 @media only screen and (max-width: 768px) {
     .cards-container {
