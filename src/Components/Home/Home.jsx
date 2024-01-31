@@ -12,22 +12,17 @@ const Home = () => {
         <Link to="/" className='logo'>
           <h1><SiYourtraveldottv />Travel</h1>
         </Link>
-
         <nav>
           <Link to="/about">ABOUT</Link>
           <Link to="/contact">CONTACT</Link>
           <h1 className='wel'>WELCOME</h1>
         </nav>
-        
       </div>
-
-      
 
       <div className="btnContainer">
         <button className='btn'>
           <Link to="/get-start">Get started <FaArrowRightLong className='icon' /></Link>
         </button>
-
         <div className="soc-media">
           <TiSocialFacebook className='fb' />
           <TiSocialLinkedin className='lin' />

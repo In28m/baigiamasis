@@ -61,7 +61,7 @@ const BookingForm = () => {
       setPhone('')
       setEmail('')
     } else {
-      alert("Prašome tinkamai užpildyti visus laukus!")
+      alert("Prašome tinkamai užpildyti laukus!")
     }
   }
 
@@ -77,21 +77,21 @@ const BookingForm = () => {
         <div>
           <button className='inputBtn'>
             <input
+              type="date"
+              placeholder="date"
+              value={date}
+              onChange={handleDateChange}
+            />
+          </button>
+
+          <button className='inputBtn'>
+            <input
               type="text"
               placeholder="Location"
               value={location}
               onChange={handleLocationChange}
             />
             <MdLocationPin />
-          </button>
-
-          <button className='inputBtn'>
-            <input
-              type="date"
-              placeholder="date"
-              value={date}
-              onChange={handleDateChange}
-            />
           </button>
 
           <button className='inputBtn'>

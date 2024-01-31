@@ -3,21 +3,24 @@
   justify-content: center;
   text-align: center;
   border-radius: 10px;
-    h2 {
-        padding-top: 25px;
-        color: var(--btnHoverColor);
+
+  h2 {
+    padding-top: 25px;
+    color: var(--btnHoverColor);
+  }
+
+  input {
+    background: none;
+    border: none;
+    text-align: center;
+    outline: none;
+    color: var(--blackColor);
+
+    &::placeholder {
+      text-align: center;
+      color: var(--whiteColor);
     }
-    input {
-        background: none;
-        border: none;
-        text-align: center;
-        outline: none;
-        color: var(--blackColor); 
-          &::placeholder {
-              text-align: center;
-              color: var(--whiteColor);
-        } 
-    }
+  }
 }
 
 .flex-container div {
@@ -33,9 +36,11 @@
 div ul {
   margin-top: 25px;
   list-style-type: none;
-    li {
-      font-weight: bold;
-    }
+
+  li {
+    font-weight: bold;
+    color: var(--btnHoverColor);
+  }
 }
 
 .inputBtn {
@@ -45,10 +50,11 @@ div ul {
   border: none;
   border-radius: 8px;
   padding: 5px 5px;
-  background-color: rgba(73, 72, 72, 0.192); 
-    svg {
-      color: var(--btnColor);
-    }
+  background-color: rgba(73, 72, 72, 0.192);
+
+  svg {
+    color: var(--btnColor);
+  }
 }
 
 .btnAdd,
@@ -57,14 +63,15 @@ div ul {
   justify-content: center;
   background: var(--btnColor);
   border: none;
-  border-radius: 50%;
-  height: 25px;
-  width: 25px;
-  margin: 3px; 
-}
+  border-radius: 100%;
+  font-size: 20px;
+  height: 30px;
+  width: 30px;
+  margin: 3px;
 
-.btnDel svg {
-  color: var(--svgDel);
+  svg {
+    color: var(--svgDel);
+  }
 }
 
 .flex-container .btn {
@@ -75,35 +82,36 @@ div ul {
 }
 
 @media only screen and (max-width: 750px) {
-.flex-container div {
-  flex-direction: column;
-  align-items: center;
-}
+  .flex-container div {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.inputBtn {
-  margin-top: 15px;
-}
-.btnAdd {
-  margin-top: 10px;
-}
+  .inputBtn {
+    margin-top: 15px;
+  }
+
+  .btnAdd {
+    margin-top: 10px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-.flex-container {
+  .flex-container {
     height: auto;
     padding: 15px;
-}
+  }
 
-.flex-container h2 {
+  .flex-container h2 {
     padding-top: 15px;
-}
+  }
 
-.flex-container .btn {
+  .flex-container .btn {
     bottom: 35px;
-}
+  }
 
-.btnAdd {
+  .btnAdd {
     flex-direction: column;
-    align-items: center; 
-}
+    align-items: center;
+  }
 }

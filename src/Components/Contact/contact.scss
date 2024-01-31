@@ -24,15 +24,13 @@
 
     .contactH {
       h1 {
-        color: var(--locatioColor);
-        position: relative;
-        background-position: center;
+        color: var(--btnHoverColor);
         flex-direction: column;
         margin-left: 150px;
       }
 
       h3 {
-        color: var(--locatioColor);
+        color: var(--btnHoverColor);
         margin-left: 150px;
       }
     }
@@ -107,14 +105,14 @@
     .Contcontainer {
       flex-direction: column;
       background-size: 100%;
-      width: 90%;
-      height: auto;
+      width: 80%;
+      height: 90vh;
 
       .contactH {
         h1,
         h3 {
           margin-left: 0;
-          font-size: 25px;
+          font-size: 20px;
         }
       }
 
@@ -126,17 +124,4 @@
       }
     }
   }
-
-  @media only screen and (min-width: 924px)  and (max-width: 1100px) {
-    .Contcontainer {
-      background-size: 60%;
-      height: auto;
-    }
-    .contInput {
-      text-align: center;
-      margin-top: 200px;
-    }
-  }
 }
-
-  

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { FaStar } from 'react-icons/fa';
+import { PiStarThin } from "react-icons/pi";
 
 const More = () => {
   const { id } = useParams()
@@ -67,7 +67,7 @@ const More = () => {
             
             <div className="starRating">
               {Array.from({ length: 5 }).map((_, starIndex) => (
-                <FaStar
+                <PiStarThin
                   key={starIndex}
                   className={starIndex < Math.floor(placeInfo.rating) ? 'starFilled' : 'starEmpty'}
                 />
